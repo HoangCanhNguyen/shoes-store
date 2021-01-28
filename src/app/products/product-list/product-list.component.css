@@ -1,0 +1,94 @@
+.container {
+  margin-top: 6em;
+  margin-bottom: 6em;
+  
+}
+
+.product-list h1 {
+  font-size: 36px;
+}
+
+.category-list .category-item {
+  transition: all 0.4s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+.category-list .category-item:hover {
+  border-bottom: 1px solid #797979;
+}
+
+ul > li {
+  margin-right: 15px;
+
+}
+
+ul > li:hover {
+  cursor: pointer;
+}
+
+.overview {
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.category-list .product-action .btn {
+  border: 1px solid #e6e6e6 !important;
+  border-radius: 3px;
+  transition: all 0.4s;
+}
+.category-list .product-action .btn .fas {
+  font-size: 10px !important;
+  padding-left: 2px;
+  transition: all 0.4s;
+}
+
+.category-list .product-action .btn:focus {
+  box-shadow: none !important;
+}
+
+.category-list .product-action .btn:hover {
+  border-color: #717fe0;
+  background-color: #717fe0;
+  color: white;
+}
+.category-list .product-action .btn:hover .fas {
+  color: white !important;
+}
+
+.list .quick-view {
+  position: absolute;
+  left: 34%;
+  bottom: 0;
+  transition: all 0.4s;
+  padding: 8px 18px;
+  background-color: white;
+  color: #333;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+.list:hover {
+  cursor: pointer;
+}
+
+.product-list .list:hover .quick-view {
+  bottom: 20%;
+  opacity: 1;
+}
+
+.quick-view:hover {
+  border-color: #222;
+  background-color: #222;
+  color: white;
+}
+.load-more {
+  padding: 8px 25px !important;
+  background-color: #e6e6e6 !important;
+  color: #333 !important;
+  border-radius: 20px !important;
+}
+.load-more:hover {
+  border-color: #222 !important;
+  background-color: #222 !important;
+  color: white !important;
+}

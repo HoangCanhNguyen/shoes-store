@@ -1,1 +1,334 @@
 /* You can add global styles to this file, and also import other style files */
+.cl3 {
+  color: #333;
+}
+.cl6 {
+  color: #666666 !important;
+}
+
+.cl9 {
+  color: #999;
+}
+
+
+a,
+button {
+  transition: all 0.3s ease-out 0s;
+}
+a:focus,
+button:focus {
+  text-decoration: none;
+}
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+
+button:focus,
+input:focus,
+input:focus,
+textarea:focus,
+h6:focus,
+p:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+div:focus,
+select:focus,
+li:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Serif", serif;
+  color: #252525;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: normal;
+}
+p {
+  font-family: "Noto Serif", serif;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+
+/* widly used CSS style */
+
+/* lotus */
+.lotus-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* title */
+.section-title h1 {
+  text-align: center;
+  color: #c9a050;
+  padding-bottom: 25px;
+  position: relative;
+  margin-bottom: 60px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-title h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background-color: #c9a050;
+}
+
+/* gallery layout */
+.single-artwork {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.img-wrapper img {
+  padding: 5px;
+  background-color: #f3f3f3;
+  border: 5px solid #161616;
+  cursor: pointer;
+}
+.info-wrapper {
+  text-align: center;
+}
+.info-wrapper p {
+  margin-bottom: 0;
+}
+.info-wrapper p:nth-child(1) {
+  color: #6d6d65;
+  font-size: 20px;
+}
+.info-wrapper p:nth-child(2) {
+  font-weight: 600;
+  font-size: 25px;
+}
+.info-wrapper p:nth-child(3) {
+  font-weight: 600;
+  font-size: 22px;
+  color: #c9a050;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  opacity: 0;
+  transition: all 0.5s;
+  background: rgba(0, 0, 0, 0.2);
+}
+.img-wrapper:hover .mask {
+  opacity: 1;
+  pointer-events: none;
+}
+.img-wrapper .extra-info {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+  z-index: 4;
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.img-wrapper .extra-info p {
+  color: #ebe9cf;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 15px;
+  transition: all 0.5s;
+}
+.img-wrapper .extra-info p:first-child {
+  transform: translateY(-20px);
+}
+.img-wrapper .extra-info p:nth-child(2) {
+  transform: translateY(20px);
+}
+.img-wrapper:hover .extra-info {
+  opacity: 1;
+  pointer-events: all;
+}
+.img-wrapper:hover .extra-info p:first-child {
+  transform: translateY(0px);
+}
+.img-wrapper:hover .extra-info p:nth-child(2) {
+  transform: translateY(0px);
+}
+.img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  bottom: 25px;
+  left: 25px;
+  transition: all 0.5s;
+  transform: scaleX(0);
+  border-top: 2px solid #ebe9cf;
+  border-bottom: 2px solid #ebe9cf;
+  z-index: 3;
+}
+.img-wrapper:hover::before {
+  transform: scaleX(1);
+}
+.img-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  bottom: 25px;
+  left: 25px;
+  transition: all 0.5s;
+  transform: scaleY(0);
+  z-index: 3;
+  border-right: 2px solid #ebe9cf;
+  border-left: 2px solid #ebe9cf;
+}
+.img-wrapper:hover::after {
+  transform: scaleY(1);
+}
+
+/* top banner */
+section.top-banner {
+  background: url("http://ozeum.themerex.net/wp-content/uploads/2019/05/main_header_bg-copyright.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 412px;
+  position: relative;
+}
+
+section.top-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background: #13130d;
+}
+
+section.top-banner h1 {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ebe9cf;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* main-content section */
+section.section {
+  background-color: #f7f6ec;
+  padding: 50px 0;
+}
+
+/* responsive */
+@media (min-width: 1400px) {
+  section.section {
+    padding: 70px 0;
+  }
+  .container {
+    max-width: 1300px;
+  }
+}
+/* for gallery layout */
+@media (max-width: 1199px) {
+  .info-wrapper p {
+    margin-bottom: 0;
+  }
+  .info-wrapper p:nth-child(1) {
+    font-size: 18px;
+  }
+  .info-wrapper p:nth-child(2) {
+    font-size: 22px;
+  }
+  .info-wrapper p:nth-child(3) {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .info-wrapper p {
+    margin-bottom: 0;
+  }
+  .info-wrapper p:nth-child(1) {
+    font-size: 14px;
+  }
+  .info-wrapper p:nth-child(2) {
+    font-size: 16px;
+  }
+  .info-wrapper p:nth-child(3) {
+    font-size: 14px;
+  }
+  section.top-banner h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+/* for section title and lotus */
+@media (max-width: 768px) {
+  .section-title h1 {
+    font-size: 35px;
+  }
+  .lotus-wrapper img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title h1 {
+    margin-bottom: 40px;
+    font-size: 28px;
+  }
+  .section-title h1::after {
+    width: 70px;
+  }
+  section.top-banner {
+    height: 200px !important;
+  }
+  section.top-banner h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+  section.section {
+    padding: 30px 0;
+  }
+}

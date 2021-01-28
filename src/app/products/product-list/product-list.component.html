@@ -1,0 +1,38 @@
+<div class="container product-list">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-uppercase overflow-hidden cl3 overview">Danh mục sản phẩm</h1>
+    </div>
+    <div class="col-12 category-list mt-2 ml-3">
+      <div class="row">
+        <ul class="list-inline mt-3">
+          <li class="list-inline-item category-item active">Tất cả sản phẩm</li>
+          <li class="list-inline-item category-item">Đồ nữ</li>
+          <li class="list-inline-item category-item">Đồ nam</li>
+          <li class="list-inline-item category-item">Túi</li>
+          <li class="list-inline-item category-item">Giày</li>
+          <li class="list-inline-item category-item">Đồng hồ</li>
+        </ul>
+        <div class="product-action ml-auto mr-4">
+          <button class="btn mr-3"><i class="fas fa-filter"></i> Lọc</button>
+          <button class="btn"><i class="fas fa-search"></i> Tìm Kiếm</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="row mt-5">
+        <div class="col-3 list mb-3" *ngFor="let product of products">
+          <img src="{{product.imageUrl}}" alt="" class="img-fluid">
+          <div class="quick-view">Xem Thêm</div>
+          <div class="list-inline mt-2">
+            <a class="list-inline-item cl9">{{product.name}}</a>
+          </div>
+          <div class="cl3" style="font-size: 14px;">{{product.price}}đ</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 text-center mt-5">
+      <button class="btn load-more text-uppercase"> xem thêm</button>
+    </div>
+  </div>
+</div>

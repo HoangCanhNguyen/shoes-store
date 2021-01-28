@@ -1,0 +1,94 @@
+<!-- <router-outlet></router-outlet> -->
+<section>
+  <div class="form-wrapper">
+    <div class="back-button" (click)="onGoBack()">
+      <i class="fas fa-arrow-left"></i>
+    </div>
+
+    <div class="form-box">
+      <div class="log-in-form">
+        <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+          <!-- <img
+            src="https://i.pinimg.com/736x/de/13/be/de13bedba8ab6783e2e460ff0e58e0a5.jpg"
+            class="d-block d-md-none"
+            style="
+              width: 200px;
+              height: auto;
+              display: block;
+              margin: 20px auto;
+            "
+          /> -->
+          <h2>Welcome Back</h2>
+          <div class="input-field">
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              formControlName="email"
+            />
+            <i class="far fa-envelope"></i>
+          </div>
+          <div class="input-field">
+            <input
+              type="password"
+              name="pass"
+              placeholder="Mật khẩu"
+              formControlName="password"
+            />
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="submit-btn mb-4">
+            <button
+              class="btn"
+              [disabled]="!loginForm.valid"
+            >
+              Đăng nhập
+            </button>
+          </div>
+          <p class="toggler">
+            Bạn chưa có tài khoản?<br />
+            <span (click)="toggleForm()">Đăng kí ngay</span>
+          </p>
+        </form>
+      </div>
+      <div class="sign-up-form">
+        <form class=" mt-5" (ngSubmit)="onSignup()" [formGroup]="signupForm">
+          <h2>Tạo tài khoản</h2>
+          <div class="input-field">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              formControlName="email"
+            />
+            <i class="far fa-envelope"></i>
+          </div>
+          <div class="input-field">
+            <input
+              type="password"
+              name="password"
+              placeholder="Mật khẩu"
+              formControlName="password"
+            />
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="submit-btn mb-4">
+            <button
+              class="btn"
+              [disabled]="!signupForm.valid"
+            >
+              Đăng kí
+            </button>
+          </div>
+          <p class="toggler">
+            Bạn đã là thành viên của chúng tôi?<br />
+            <span (click)="toggleForm()">Đăng nhập</span>
+          </p>
+        </form>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="https://cdn.dribbble.com/users/2984251/screenshots/5820168/11_4x.jpg?compress=1&resize=400x300" />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,66 @@
+<div class="overlay" id="overlay" [ngClass]="{ active: activeBars }"></div>
+<header id="header" class="header-section">
+  <div class="container">
+    <div class="header-wrapper">
+      <div class="logo" style="margin-right: auto">
+        <span>Shóes</span>
+      </div>
+      <ul class="main-menu" [ngClass]="{ active: activeBars }">
+        <img src="http://ozeum.themerex.net/wp-content/uploads/2019/10/logo.png" class="d-block d-xl-none mt-5 mb-4" />
+        <li [routerLink]="['']" routerLinkActive="router-link-active" (click)="activeBars = false">
+          <i class="fas fa-home d-block d-xl-none mr-2 mb-1"></i>
+          Trang chủ
+        </li>
+        <li [routerLink] = "['/list']" routerLinkActive="router-link-active" (click)="activeBars = false">
+          <i class="fas fa-list-ul d-block d-xl-none mr-2 mb-1"></i>
+          Sản phẩm
+        </li>
+        <li routerLinkActive="router-link-active" (click)="activeBars = false">
+          <i class="fas fa-list-ul d-block d-xl-none mr-2 mb-1"></i>
+          Giỏ hàng
+        </li>
+
+        <li routerLinkActive="router-link-active" (click)="activeBars = false">
+          <i class="far fa-newspaper d-block d-xl-none mr-2 mb-1"></i>
+          Tin tức
+        </li>
+        <li *ngIf="!isAuth" (click)="activeBars = false" [routerLink]="['/auth']" routerLinkActive="router-link-active">
+          <i class="fas fa-user-plus d-block d-xl-none mr-2 mb-1"></i> Đăng
+          nhập/Đăng kí
+        </li>
+        <li *ngIf="isAuth" class="position-relative has-dropdown" (click)="showManageAccDropdown()">
+          <i class="far fa-user d-block d-xl-none mr-2 mb-1"></i>Tài khoản
+          <i class="fas fa-chevron-down ml-2 ml-xl-1"></i>
+          <ul class="sub-menu d-none d-xl-block">
+            <li [routerLink] ="['/admin']">Quản lý</li>
+            <li (click)="logout()">Đăng xuất</li>
+          </ul>
+        </li>
+        <ul class="sub-menu-mobile d-block d-xl-none" id="acc-management">
+          <li (click)="activeBars = false" (click)="logout()">
+            <i class="fas fa-sign-out-alt d-xl-none mr-2 mb-1"></i>Đăng xuất
+          </li>
+        </ul>
+        <li class="d-block d-xl-none" (click)="activeBars = false">
+          <div class="search-form">
+            <form>
+              <input type="text" placeholder="Tìm kiếm..." />
+              <button><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+        </li>
+      </ul>
+      <div class="header-bar d-block d-xl-none" (click)="addActiveClass()" [ngClass]="{ active: activeBars }">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="search-form d-none d-xl-block">
+        <form>
+          <input type="text" placeholder="Tìm kiếm..." />
+          <button><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>

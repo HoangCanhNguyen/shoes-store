@@ -1,0 +1,249 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ebe9cf;
+}
+
+/* style bac-button */
+.back-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #d5a770;
+  color: #d5a770;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.5s;
+}
+.back-button:hover {
+  background-color: #d5a770;
+  color: white;
+}
+
+/* style log-in form */
+.form-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+  margin: 20px;
+  height: 600px;
+  background-color: #f7f6ec;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-box {
+  width: 45%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.form-box .log-in-form,
+.form-box .sign-up-form {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.form-box form {
+  position: relative;
+  width: 100%;
+  padding: 0 0 0 75px;
+}
+
+.form-box form h2 {
+  color: #6d6d65;
+  text-align: center;
+  font-weight: 600;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.form-box .input-field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-box .input-field input {
+  position: relative;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-weight: 500;
+  color: #6d6d65;
+  font-size: 18px;
+  border-radius: 25px;
+  padding: 0.58em 0.8em 0.58em 3em;
+  border: 1px solid #d5a770;
+}
+
+.form-box .input-field input::placeholder {
+  font-weight: 400;
+}
+
+.form-box .input-field i {
+  position: absolute;
+  top: 15px;
+  color: #d19961;
+  left: 25px;
+  font-size: 20px;
+}
+
+/* style sign-up form */
+.form-box .sign-up-form {
+  position: absolute;
+  opacity: 0;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form-box .sign-up-form form {
+  height: 100%;
+  bottom: 70px;
+}
+
+.form-box.active .sign-up-form {
+  left: 0;
+  opacity: 1;
+}
+
+.form-box.active .log-in-form {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+p.toggler {
+  margin-top: 30px;
+  text-align: center;
+}
+
+p.toggler span {
+  color: #d5a770;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+p.toggler span:hover {
+  color: #d19961;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* style selector */
+.selector {
+  width: 100%;
+  cursor: pointer;
+  padding: 0.6em 2em 0.6em 1em;
+  margin-bottom: 25px;
+  color: #6d6d65;
+  font-size: 18px;
+  border: 1px solid #d5a770;
+  border-radius: 30px;
+  background-color: #f7f6ec;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* style submit button */
+.submit-btn {
+  text-align: center;
+}
+.submit-btn button {
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.4s;
+  background-color: #d5a770;
+  outline: none !important;
+  font-weight: 600;
+  font-family: "Noto Serif", sans-serif;
+  text-transform: uppercase;
+}
+.submit-btn button:hover {
+  background: #d19961;
+}
+
+/* style image box */
+.img-box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.img-box::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d19961;
+  opacity: 0.4;
+  transform-origin: bottom;
+  transform: skewX(-25deg) translateX(10%);
+}
+
+.img-box img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  filter: saturate(3);
+}
+
+@media (max-width: 992px) {
+  .form-box form h2 {
+    font-size: 27px;
+    margin-bottom: 25px;
+  }
+  .form-box form {
+    padding-left: 50px;
+  }
+  .back-button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-box {
+    display: none;
+  }
+  .form-box {
+    width: 100%;
+  }
+  .form-box form {
+    padding: 0 20px;
+  }
+  .form-box form h2 {
+    font-size: 24px;
+  }
+  .form-box .sign-up-form form {
+    bottom: -55px;
+  }
+}

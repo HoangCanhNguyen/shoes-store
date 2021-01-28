@@ -1,0 +1,34 @@
+ .banner-description {
+  left: 15%;
+  top: 35%;
+}
+
+ .banner-description .collection {
+  font-size: 28px;
+  line-height: 1.2857;
+}
+
+ .banner-description .big-title {
+  font-size: 60px;
+  line-height: 1.1;
+  font-family: PlayfairDisplay;
+}
+
+ .banner-description .btn-primary {
+  background-color: #717fe0;
+  border: none;
+  border-radius: 23px;
+  transition: all 0.4s ease-in-out;
+}
+
+ .banner-description .btn-primary:hover {
+  background-color: black;
+}
+
+.carousel .carousel-control-prev {
+  left: -3%;
+}
+
+.carousel .carousel-control-next {
+  right: -3%;
+}

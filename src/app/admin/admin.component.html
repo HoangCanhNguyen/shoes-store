@@ -1,0 +1,58 @@
+<div class="col-sm-12" style="margin-top: 10em">
+  <div class="tabs mt-3">
+    <div class="d-flex acc-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 basic-info">
+            <form (ngSubmit)='onUpdate()' [formGroup]='productForm'>
+              <div class="form-group row">
+                <label class="col-sm-2 offset-sm-2 col-form-label p-0">Tên sản phẩm</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" formControlName='name' />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 offset-sm-2 col-form-label p-0">Mô tả</label>
+                <div class="col-sm-5">
+                  <input class="form-control" formControlName='description' />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 offset-sm-2 col-form-label p-0">Giá</label>
+                <div class="col-sm-5">
+                  <input class="form-control" formControlName='price' />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 offset-sm-2 col-form-label p-0">Ảnh sản phẩm</label>
+                <div class="col-sm-5">
+                  <div class="acc-preview" id="upload-avatar">
+                    <p>Profile Photo</p>
+                    <hr class="mb-4" />
+                    <img [src]="imagePreview" class="rimg-fluid d-block mx-auto"
+                      *ngIf="imagePreview" width="80%"
+                      height="auto" />
+                    <hr class="mb-0" />
+                    <label for="file-upload" class="btn btn-light btn-block custom-file-upload mb-0" style="
+                            border-radius: 0%;
+                            border: none;
+                            background: transparent;
+                          ">
+                      Tải ảnh lên
+                    </label>
+                    <input #file id="file-upload" type="file" (change)='onImageUpload($event)' />
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group text-center">
+                  <button class="place-order-btn">Lưu</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
